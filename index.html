@@ -1,46 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,900,100,1;1,9..144,900,100,1&display=swap"
-      rel="stylesheet"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frida & Dardan</title>
-    <style>
-      html {
-        height: 100%;
-        font-family: "Fraunces";
-        color: white;
-        background-color: black;
-      }
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,100,1;1,9..144,100..900,100,1&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frida & Dardan</title>
+  <style>
+    html {
+      height: 100%;
+      font-family: "Open Sans";
+      color: white;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+    }
 
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-      }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      max-width: 500px;
+    }
 
-      section {
-        margin: 0;
-        padding-block: 0;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Save The Date</h1>
-    <section>
-      <h2>Frida & Dardan 30 år</h2>
-      <h2>20 September 2025, Göteborg</h2>
-    </section>
-    <h3>more info to come...</h3>
-    <img
-      src="https://media.giphy.com/media/tHIRLHtNwxpjIFqPdV/giphy.gif?cid=790b7611fng59pny9vyfvfudees7uzt4nhwc2k2z93lx4a6a&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-    />
-  </body>
+    section {
+      margin: 0;
+      padding-block: 0;
+      text-align: center;
+    }
+
+    .grid-parent {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      grid-column-gap: 8px;
+      grid-row-gap: 16px;
+    }
+
+    .grid-parent>h3 {
+      text-align: start;
+    }
+
+    a {
+      color: white;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 400;
+    }
+
+    .grid-parent>p {
+      padding: 0;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: "Fraunces";
+      text-align: center;
+      font-size: clamp(28px, 7.5vw, 80px);
+    }
+
+    .div1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .div2 {
+      grid-area: 1 / 2 / 2 / 3;
+      text-align: start;
+    }
+
+    .div3 {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .div4 {
+      grid-area: 2 / 2 / 3 / 3;
+      text-align: start;
+    }
+
+    #anmalan {
+      font-family: "Fraunces";
+      font-size: larger;
+      color: black;
+      background-color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 10rem;
+      box-sizing: border-box;
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    img {
+      max-width: 150px;
+      min-width: 70px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Frida & Dardan 30 år</h1>
+  <img
+    src="https://media.giphy.com/media/tHIRLHtNwxpjIFqPdV/giphy.gif?cid=790b7611fng59pny9vyfvfudees7uzt4nhwc2k2z93lx4a6a&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
+  <p>Vi vill bjuda in er till att fira era bästa vänners nästintill gemensamma 30-årsdag. Vi kommer bjuda på mat, dryck,
+    tävlingar, bra musik och vibes 🤙</p>
+  <p>För att kunna planera behöver vi veta hur många som kommer. Fyll i era namn i formuläret nedan!</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScs2h-uPQQfL5iwNEY9C47glWaX_vVsK7U1DengOxt5EXFHcA/viewform?usp=header"
+    id="anmalan">¡Anmäl er här!</a>
+  <section>
+    <div class="grid-parent">
+      <p class="div1">När?: </p>
+      <p class="div2">Lördagen den 20 September 2025</p>
+      <p class="div3">Var?: </p>
+      <p class="div4">Lundenhuset på Överåsvallen, Skogshyddegatan 18, Göteborg <br /> (<a
+          href="https://maps.app.goo.gl/JixdoRL1EsUfxzHY9" target="_blank">Länk till Google Maps</a>)<br />
+        (<a href="https://maps.apple.com/place?coordinate=57.707105,12.003016&name=Festlokalen&map=explore"
+          target="_blank">Länk till Apple Maps</a>)</p>
+  </section>
+  </div>
+</body>
+
 </html>
